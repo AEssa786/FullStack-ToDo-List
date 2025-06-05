@@ -1,9 +1,10 @@
 import mysql.connector
+import os
 
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="E$$@78644",
+    password=os.getenv("MYSQL_PASSWORD"),
     database="todo"
     )
 
